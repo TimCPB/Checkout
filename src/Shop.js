@@ -2,6 +2,7 @@ class Shop {
   constructor() {
     this.containsIllegalItem = false,
     this.basketTotal = 0,
+    this.basket = ''
     this.offer1 = {
       items: 'AAA',
       price: 130
@@ -9,19 +10,15 @@ class Shop {
   }
 
   checkout(items){
-    // if(items contain 'AAA'){
-    //   this.basketTotal += 130
-    //   items.delete('AAA')
-    // }
-    // else if ()
+    this.basket = items
     this.basketTotal = 0
-    if(items.includes(this.offer1.items)) {
-      // this.basketTotal += 130
-      // items.replace(this.offer1.items, "")
-      return this.basketTotal += 130
+    if(this.basket.includes(this.offer1.items)) {
+      this.basket = this.basket.replace("AAA", "")
+      this.basketTotal += 130
+      console.log(this.basket)
     }
 
-    let itemArray = items.split('')
+    let itemArray = this.basket.split('')
 
     
 

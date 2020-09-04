@@ -31,7 +31,7 @@ describe("Shop", function() {
     expect(shop.checkout('ABCD')).toEqual(115)
   })
 
-  it("calculates the total for special offers", function(){
+  it("calculates the total for first special offers", function(){
     expect(shop.checkout('AAA')).toEqual(130)
   })
 
