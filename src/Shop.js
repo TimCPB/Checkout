@@ -16,13 +16,7 @@ class Shop {
   checkout(items){
     this.basket = items
     this.basketTotal = 0
-    if(this.basket.includes(this.offer1.items)) {
-      this.basket = this.basket.replace(this.offer1.items, "")
-      this.basketTotal += this.offer1.price
-    } else if(this.basket.includes(this.offer2.items)) {
-      this.basket = this.basket.replace(this.offer2.items, "")
-      this.basketTotal += this.offer2.price
-    }
+    this._applySpecialOffers()
 
     let itemArray = this.basket.split('')
 
@@ -50,4 +44,16 @@ class Shop {
       } else { this.containsIllegalItem = true }
     }, this)
   }
+
+  _applySpecialOffers(){
+    if(this.basket.includes(this.offer1.items)) {
+      this.basket = this.basket.replace(this.offer1.items, "")
+      this.basketTotal += this.offer1.price
+    } else if(this.basket.includes(this.offer2.items)) {
+      this.basket = this.basket.replace(this.offer2.items, "")
+      this.basketTotal += this.offer2.price
+    }
+  }
+
+  
 }
