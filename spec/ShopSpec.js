@@ -24,5 +24,9 @@ describe("Shop", function() {
   it("returns -1 when given an illegal input", function() {
     expect(shop.checkout('aBc')).toEqual(-1)
   })
-  
+
+  it("returns 100 for items AA", function(){
+    expect(shop.checkout('AA')).toEqual(100)
+  })
+
 })
