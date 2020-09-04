@@ -6,6 +6,10 @@ class Shop {
     this.offer1 = {
       items: 'AAA',
       price: 130
+    },
+    this.offer2 = {
+      items: "BB",
+      price: 45
     }
   }
 
@@ -15,7 +19,8 @@ class Shop {
     if(this.basket.includes(this.offer1.items)) {
       this.basket = this.basket.replace(this.offer1.items, "")
       this.basketTotal += 130
-      console.log(this.basket)
+    } else if(this.basket.includes(this.offer2.items)) {
+      return 45
     }
 
     let itemArray = this.basket.split('')
