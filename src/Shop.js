@@ -20,7 +20,8 @@ class Shop {
       this.basket = this.basket.replace(this.offer1.items, "")
       this.basketTotal += 130
     } else if(this.basket.includes(this.offer2.items)) {
-      return 45
+      this.basket = this.basket.replace(this.offer2.items, "")
+      this.basketTotal += 45
     }
 
     let itemArray = this.basket.split('')
