@@ -13,7 +13,7 @@ class Shop {
     this.basket = items
     this.basketTotal = 0
     if(this.basket.includes(this.offer1.items)) {
-      this.basket = this.basket.replace("AAA", "")
+      this.basket = this.basket.replace(this.offer1.items, "")
       this.basketTotal += 130
       console.log(this.basket)
     }
