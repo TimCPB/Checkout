@@ -15,11 +15,9 @@ class Shop {
   }
 
   checkout(items){
-    this.basket = items
+    this._setBasket(items)
     this._resetBasketTotal()
     this._applySpecialOffers()
-
-    // let itemArray = this.basket.split('')
 
     this._createItemsArray()
 
@@ -67,6 +65,10 @@ class Shop {
 
   _resetBasketTotal(){
     this.basketTotal = 0
+  }
+
+  _setBasket(items){
+    this.basket = items
   }
 
   
