@@ -3,6 +3,7 @@ class Shop {
     this.containsIllegalItem = false,
     this.basketTotal = 0,
     this.basket = ''
+    this.itemsArray = []
     this.offer1 = {
       items: 'AAA',
       price: 130
@@ -18,11 +19,11 @@ class Shop {
     this.basketTotal = 0
     this._applySpecialOffers()
 
-    let itemArray = this.basket.split('')
+    // let itemArray = this.basket.split('')
 
-    
+    this._createItemsArray()
 
-    this._calculateBasketTotal(itemArray)
+    this._calculateBasketTotal()
 
     this._checkForIllegalItems()
 
@@ -30,8 +31,8 @@ class Shop {
 
   }
 
-  _calculateBasketTotal(array){
-    array.forEach(function(item) {
+  _calculateBasketTotal(){
+    this.itemsArray.forEach(function(item) {
       if(item === 'A'){ 
         this.basketTotal += 50
       } else if(item === 'B'){
@@ -58,6 +59,10 @@ class Shop {
       this.basket = this.basket.replace(this.offer2.items, "")
       this.basketTotal += this.offer2.price
     }
+  }
+
+  _createItemsArray(){
+    this.itemsArray = this.basket.split('')
   }
 
   
