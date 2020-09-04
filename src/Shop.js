@@ -5,7 +5,15 @@ class Shop {
   }
 
   checkout(items){
+    // if(items contain 'AAA'){
+    //   this.basketTotal += 130
+    //   items.delete('AAA')
+    // }
+    // else if ()
+    this.basketTotal = 0
     let itemArray = items.split('')
+
+    
 
     this._calculateTotal(itemArray)
 

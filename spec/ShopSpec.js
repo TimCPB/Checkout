@@ -26,8 +26,9 @@ describe("Shop", function() {
     expect(shop.checkout('aaB')).toEqual(-1)
   })
 
-  it("returns 100 for items AA", function(){
+  it("calculates the total for multiple items", function(){
     expect(shop.checkout('AA')).toEqual(100)
+    expect(shop.checkout('ABCD')).toEqual(115)
   })
 
 })
