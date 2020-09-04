@@ -46,7 +46,7 @@ class Shop {
   }
 
   _checkForIllegalItems(){
-    if(this.containsIllegalItem === true) {
+    if(this.containsIllegalItem) {
       this.basketTotal = -1
     }
   }
