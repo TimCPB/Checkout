@@ -22,16 +22,15 @@ class Shop {
 
     
 
-    this._calculateTotal(itemArray)
+    this._calculateBasketTotal(itemArray)
 
-    if(this.containsIllegalItem === false) {
-      return this.basketTotal
-    } else {
-      return -1
-    }
+    this._checkForIllegalItems()
+
+    return this.basketTotal
+
   }
 
-  _calculateTotal(array){
+  _calculateBasketTotal(array){
     array.forEach(function(item) {
       if(item === 'A'){ 
         this.basketTotal += 50
@@ -43,6 +42,12 @@ class Shop {
         this.basketTotal += 15 
       } else { this.containsIllegalItem = true }
     }, this)
+  }
+
+  _checkForIllegalItems(){
+    if(this.containsIllegalItem === true) {
+      this.basketTotal = -1
+    }
   }
 
   _applySpecialOffers(){
