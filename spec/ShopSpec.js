@@ -20,4 +20,8 @@ describe("Shop", function() {
   it ("returns 20 for item C", function(){
     expect(shop.checkout('C')).toEqual(20)
   })
+
+  it ("returns 15 for item D", function(){
+    expect(shop.checkout('D')).toEqual(15)
+  })
 })
