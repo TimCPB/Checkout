@@ -1,7 +1,11 @@
 class Shop {
   constructor() {
     this.containsIllegalItem = false,
-    this.basketTotal = 0
+    this.basketTotal = 0,
+    this.offer1 = {
+      items: 'AAA',
+      price: 130
+    }
   }
 
   checkout(items){
@@ -11,6 +15,12 @@ class Shop {
     // }
     // else if ()
     this.basketTotal = 0
+    if(items.includes(this.offer1.items)) {
+      // this.basketTotal += 130
+      // items.replace(this.offer1.items, "")
+      return this.basketTotal += 130
+    }
+
     let itemArray = items.split('')
 
     
