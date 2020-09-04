@@ -5,10 +5,6 @@ describe("Shop", function() {
     shop = new Shop()
   });
 
-  // it("returns -1 when given an illegal input", function() {
-  //   expect(shop.checkout('aBc')).toEqual(-1)
-  // })
-
   it("returns 50 for item A", function() {
     expect(shop.checkout('A')).toEqual(50)
   })
@@ -24,4 +20,9 @@ describe("Shop", function() {
   it ("returns 15 for item D", function(){
     expect(shop.checkout('D')).toEqual(15)
   })
+
+  it("returns -1 when given an illegal input", function() {
+    expect(shop.checkout('aBc')).toEqual(-1)
+  })
+  
 })
