@@ -6,8 +6,10 @@ class Shop {
     return 50
     } else if(item === 'B'){
       return 30
-    } else {
+    } else if(item === 'C'){
       return 20
+    } else {
+      return 15
     }
   }
 }
