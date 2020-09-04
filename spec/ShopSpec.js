@@ -35,12 +35,13 @@ describe("Shop", function() {
     expect(shop.checkout('AAA')).toEqual(130)
   })
 
-  it("calculates the total for special offers plus regular items", function(){
-    expect(shop.checkout('AAAAA')).toEqual(230)
-  })
-
   it("calculates the total for second special offer", function() {
     expect(shop.checkout("BB")).toEqual(45)
+  })
+
+  it("calculates the total for special offers plus regular items", function(){
+    expect(shop.checkout('AAAAA')).toEqual(230)
+    expect(shop.checkout('BBAB')).toEqual(125)
   })
 
 })
